@@ -1,0 +1,19 @@
+{
+  "name": "worker-collector",
+  "version": "1.0.0",
+  "description": "Programa enfocado en la búsqueda de trabajadores de TSP en las diferentes paginas de sus socios.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --env-file .env.dev index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
