@@ -5,7 +5,7 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --env-file .env.dev index.js"
+    "dev": "nodemon --env-file .env.dev src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "nodemon": "^3.1.0"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3"
   }
 }
