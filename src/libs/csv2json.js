@@ -1,17 +1,25 @@
 import fs from 'fs';
 
-let csvfile = fs.readFileSync('../../TSP_4-2024_UsersCerts.csv');
+const map = Array.prototype.map;
+const csvfile = fs.readFileSync('../../TSP_4-2024_UsersCerts.csv');
 const csvfile_to_string = csvfile.toString().split('\n');
 
 let jsonObjects = [];
 
 let headers = csvfile_to_string[0].split(',');
+const newHeaders = map.call(headers, (current) => {
+    if(current.includes(' ')){
+        return current.split(' ').join('_');
+    }else{
+        return current;
+    }
+});
 
 for(let i=0; i<csvfile_to_string.length; i++){
     let data = csvfile_to_string[1].split(',');
     let object = {};
     for(let j=0; j<data.length; j++){
-        object[headers[j].trim()] = data[j].trim();        
+        object[newHeaders[j].trim()] = data[j].trim();        
     }
     jsonObjects.push(object);
 }
