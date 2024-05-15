@@ -15,6 +15,9 @@ export async function connectDB() {
 
 export async function uploadDataBase(file) {
   try {
+    // Borrar todos los documentos de la colección Worker antes de agregar nuevos
+    await Worker.deleteMany({});
+
     const jsonData = JSON.parse(fs.readFileSync(file, "utf-8"));
     for (let i = 0; i < jsonData.length; i++) {
       const newWorker = new Worker({
