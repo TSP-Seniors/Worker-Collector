@@ -75,15 +75,15 @@ body {
   }
 }
 
-/* .btn-amarillo {
+.btn-amarillo {
   background-color: rgb(207, 207, 22);
-} */
+}
 .btn-rojo {
   background-color: red;
 }
-/* .btn-verde {
+.btn-verde {
   background-color: green;
-} */
+}
 
 .container .trabajadores .trabajadores-listado .bloque-3 {
   border-radius: 15px;
