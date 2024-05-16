@@ -1,5 +1,5 @@
-import express from "express"
-import workerRouter from "./routes/worker.routes.js"
+import express from "express";
+import workerRouter from "./routes/worker.routes.js";
 import ejs from "ejs";
 
 const app = express();

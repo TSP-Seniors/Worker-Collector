@@ -1,8 +1,98 @@
+* {
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* background-color: red; */
+  /* font-size: 1.8rem; */
+}
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+  background-color: #5b0672;
+  max-width: 120rem;
+  min-width: 80rem;
 }
 
-h1 {
-    color: #333;
+.container {
+  color: white;
+  /* max-width: 120rem;
+  min-width: 80rem; */
+  padding: 5rem;
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.container .buscador {
+  input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 5px;
+  }
+  button {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4b32dd;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.container .trabajadores {
+  border-radius: 15px;
+  padding: 50px;
+  border: 1.5px solid black;
+  background-color: #2b123f;
+}
+
+.container .trabajadores .trabajadores-listado {
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  /* padding: 2rem; */
+  background-color: #4b32dd;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 37% 37% 26%;
+  p {
+    padding: 1rem;
+  }
+}
+
+.container .trabajadores .trabajadores-listado .bloque-1 {
+  padding: 2rem;
+}
+.container .trabajadores .trabajadores-listado .bloque-2 {
+  padding: 2rem;
+  p:first-child {
+    text-transform: uppercase;
+  }
+  p:not(:first-child) {
+    font-weight: normal;
+  }
+}
+
+/* .btn-amarillo {
+  background-color: rgb(207, 207, 22);
+} */
+.btn-rojo {
+  background-color: red;
+}
+/* .btn-verde {
+  background-color: green;
+} */
+
+.container .trabajadores .trabajadores-listado .bloque-3 {
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-transform: uppercase; */
+  p {
+    text-transform: uppercase;
+  }
 }
