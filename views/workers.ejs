@@ -8,14 +8,16 @@
 <body>
     <h1>HOla</h1>
     <ul>
-        <% ArrWorkers.forEach(worker => { %>
+        <% ArrWorkers.forEach((worker, index) => { %>
             <li>
                 <p>Nombre: <%= worker.contact_name %></p>
                 <p>Certificación: <%= worker.certification_name %></p>
                 <p>Fecha de Certificación: <%= worker.certification_date %></p>
-                <p>Fecha de Expiración: <%= worker.expiration_date %></p>
+                <p>Fecha de Expiración: <span id="exp"><%= worker.expiration_date %></span></p>
+                <div id="time_<%= index %>"></div>
             </li>
         <% }); %>
     </ul>
-</body>
+    <script type="module" src="scripts/workers.js"></script>
+    </body>
 </html>
