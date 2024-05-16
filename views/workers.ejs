@@ -3,20 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title><%= title %></title>
   </head>
   <body>
-    <h1>Hola</h1>
-    <ul>
-      <% ArrWorkers.forEach(worker => { %>
-      <li>
-        <p>Nombre: <%= worker.contact_name %></p>
-        <p>Empresa: DISNEY</p>
-        <p>Certificación: <%= worker.certification_name %></p>
-        <p>Fecha de Certificación: <%= worker.certification_date %></p>
-        <p>Fecha de Expiración: <%= worker.expiration_date %></p>
-      </li>
-      <% }); %>
-    </ul>
+    <!-- <h1>Hola</h1> -->
+    <div class="container">
+      <div class="buscador">
+        <input type="text" id="nombre" placeholder="Buscar Nombre" />
+        <button type="submit">buscar</button>
+      </div>
+      <div class="trabajadores">
+        <ol>
+          <% ArrWorkers.forEach(worker => { %>
+          <li class="trabajadores-listado">
+            <div class="bloque-1">
+              <p>Nombre: <%= worker.contact_name %></p>
+              <p>Empresa: DISNEY</p>
+            </div>
+            <div class="bloque-2">
+              <p>Certificación: <%= worker.certification_name %></p>
+              <p>Fecha de Certificación: <%= worker.certification_date %></p>
+              <p>Fecha de Expiración: <%= worker.expiration_date %></p>
+            </div>
+            <div class="bloque-3 btn-amarillo btn-rojo btn-verde">
+              <p>Días restantes: 31</p>
+            </div>
+          </li>
+          <% }); %>
+        </ol>
+      </div>
+    </div>
   </body>
 </html>

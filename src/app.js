@@ -1,10 +1,11 @@
-import express from "express"
-import workerRouter from "./routes/worker.routes.js"
+import express from "express";
+import workerRouter from "./routes/worker.routes.js";
 import ejs from "ejs";
 
 const app = express();
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.use(workerRouter);
 
 export default app;
