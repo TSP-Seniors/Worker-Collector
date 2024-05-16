@@ -15,7 +15,7 @@
       </div>
       <div class="trabajadores">
         <ol>
-          <% ArrWorkers.forEach(worker => { %>
+          <% ArrWorkers.forEach((worker, index) => { %>
           <li class="trabajadores-listado">
             <div class="bloque-1">
               <p>Nombre: <%= worker.contact_name %></p>
@@ -23,8 +23,8 @@
             </div>
             <div class="bloque-2">
               <p>Certificación: <%= worker.certification_name %></p>
-              <p>Fecha de Certificación: <%= worker.certification_date %></p>
-              <p>Fecha de Expiración: <span id="exp"><%= worker.expiration_date %></span></p>
+              <p>Fecha de Certificación: <%= worker.certification_date.toLocaleDateString() %></p>
+              <p>Fecha de Expiración: <span id="exp"><%= worker.expiration_date.toLocaleDateString() %></span></p>
             </div>
             <div id="time_<%= index %>" class="bloque-3 btn-amarillo btn-rojo btn-verde"></div>
           </li>
@@ -32,5 +32,6 @@
         </ol>
       </div>
     </div>
+    <script type="module" src="scripts/workers.js"></script>
   </body>
 </html>
