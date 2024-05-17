@@ -8,6 +8,7 @@
   /* background-color: red; */
   /* font-size: 1.8rem; */
 }
+
 body {
   background-color: #5b0672;
   max-width: 120rem;
@@ -16,25 +17,32 @@ body {
 
 .container {
   color: white;
-  width: 80%;
   /* max-width: 120rem;
   min-width: 80rem; */
   padding: 5rem;
   /* background-color: red; */
+  display: grid;
   grid-template-columns: 1fr 2fr;
 }
 
-.container .buscador {
-  input {
-    padding: 10px;
-    width: 80%;
-    border-radius: 5px;
-  }
-  margin: 1em;
+.container .buscador input {
+  padding: 10px;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.container .buscador button {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4b32dd;
+  color: white;
+  cursor: pointer;
 }
 
 .container .trabajadores {
-  margin: 1em;
   border-radius: 15px;
   padding: 50px;
   border: 1.5px solid black;
@@ -44,36 +52,32 @@ body {
 .container .trabajadores .trabajadores-listado {
   border-radius: 15px;
   margin-bottom: 2rem;
+  /* padding: 2rem; */
   background-color: #4b32dd;
   font-weight: bold;
-  list-style-type: none
+  display: grid;
+  grid-template-columns: 37% 37% 26%;
+  p {
+    padding: 1rem;
+  }
 }
 
-.container .trabajadores .trabajadores-listado p {
-  padding: 1rem;
+.container .trabajadores .trabajadores-listado.filter {
+  display: none;
 }
 
 .container .trabajadores .trabajadores-listado .bloque-1 {
-  padding: 1rem;
+  padding: 2rem;
 }
+
 .container .trabajadores .trabajadores-listado .bloque-2 {
-  padding: 1rem;
+  padding: 2rem;
   p:first-child {
     text-transform: uppercase;
   }
   p:not(:first-child) {
     font-weight: normal;
   }
-}
-
-.btn-amarillo {
-  background-color: rgb(207, 207, 22);
-}
-.btn-rojo {
-  background-color: red;
-}
-.btn-verde {
-  background-color: green;
 }
 
 .container .trabajadores .trabajadores-listado .bloque-3 {
@@ -88,6 +92,14 @@ body {
   }
 }
 
-.filter {
-  display: none;
+.btn-amarillo {
+  background-color: rgb(207, 207, 22);
+}
+
+.btn-rojo {
+  background-color: red;
+}
+
+.btn-verde {
+  background-color: green;
 }
