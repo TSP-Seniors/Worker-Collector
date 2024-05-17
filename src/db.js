@@ -43,14 +43,14 @@ export async function uploadDataBase(file) {
 
 // Esta funcion trae todos los objetos guardados en la base de datos
 export async function getWorkers() {
-    try {
-        const workers = await Worker.find();
-        console.log('Trabajadores cargados');
-        // console.log(workers);
-        return workers;
-    } catch (error) {
-        console.log('Error al obtener los datos:', error);
-    }
+  try {
+    const workers = await Worker.find();
+    console.log('Trabajadores cargados');
+    // console.log(workers);
+    return workers;
+  } catch (error) {
+    console.log('Error al obtener los datos:', error);
+  }
 }
 
 export async function getCollections() {

@@ -2,13 +2,14 @@ import { expiryTime } from "./dateCalculate.js";
 
 document.addEventListener('keyup', (e) => {
     if (e.target.matches('#nombre')) {
-        const searchText = e.target.value.toLocaleLowerCase();
+        const searchText = e.target.value.trim().toLowerCase();
 
         document.querySelectorAll('.trabajadores-listado').forEach(worker => {
-            console.log(worker.parentElement('#nombre'));
+            const workerName = worker.querySelector('#nombre-trabajador').textContent.trim().toLowerCase();
+
             if (searchText === '') {
                 worker.classList.remove('filter');
-            } else if (worker.textContent.toLocaleLowerCase().includes(searchText)) {
+            } else if (workerName.includes(searchText)) {
                 worker.classList.remove('filter');
             } else {
                 worker.classList.add('filter');

@@ -4,6 +4,6 @@ import { homePage, workerPage } from "../controllers/worker.controller.js";
 const router = Router();
 
 router.get('/', homePage);
-router.get('/workers', workerPage);
+router.get('/workers/:id', workerPage);
 
 export default router;
