@@ -11,14 +11,13 @@
     <div class="container">
       <div class="buscador">
         <input type="text" id="nombre" placeholder="Buscar Nombre" />
-        <button type="submit">buscar</button>
       </div>
       <div class="trabajadores">
-        <ol>
+        <ul>
           <% ArrWorkers.forEach((worker, index) => { %>
           <li class="trabajadores-listado">
             <div class="bloque-1">
-              <p>Nombre: <%= worker.contact_name %></p>
+              <p>Nombre: <span id="nombre-trabajador"><%= worker.contact_name %></span></p>
               <p>Empresa: DISNEY</p>
             </div>
             <div class="bloque-2">
@@ -30,7 +29,7 @@
             <!-- btn-amarillo btn-rojo btn-verde -->
           </li>
           <% }); %>
-        </ol>
+        </ul>
       </div>
     </div>
     <script type="module" src="scripts/workers.js"></script>

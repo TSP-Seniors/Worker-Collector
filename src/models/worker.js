@@ -1,4 +1,4 @@
-import { Schema, isObjectIdOrHexString, model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const WorkerSchema = new Schema({
     partner_name: {
@@ -31,4 +31,4 @@ const WorkerSchema = new Schema({
     },
 });
 
-export default model('Worker', WorkerSchema);
+export default model('Extreme Networks', WorkerSchema);

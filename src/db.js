@@ -52,3 +52,17 @@ export async function getWorkers() {
         console.log('Error al obtener los datos:', error);
     }
 }
+
+export async function getCollections() {
+  try {
+    const collections = await mongoose.connection.listCollections();
+    const arrCollections = [];
+    collections.forEach(e => {
+      arrCollections.push(e);
+    })
+    return arrCollections;
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+}

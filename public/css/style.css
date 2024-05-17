@@ -16,33 +16,25 @@ body {
 
 .container {
   color: white;
+  width: 80%;
   /* max-width: 120rem;
   min-width: 80rem; */
   padding: 5rem;
   /* background-color: red; */
-  display: grid;
   grid-template-columns: 1fr 2fr;
 }
 
 .container .buscador {
   input {
     padding: 10px;
-    width: 70%;
+    width: 80%;
     border-radius: 5px;
   }
-  button {
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4b32dd;
-    color: white;
-    cursor: pointer;
-  }
+  margin: 1em;
 }
 
 .container .trabajadores {
+  margin: 1em;
   border-radius: 15px;
   padding: 50px;
   border: 1.5px solid black;
@@ -52,21 +44,20 @@ body {
 .container .trabajadores .trabajadores-listado {
   border-radius: 15px;
   margin-bottom: 2rem;
-  /* padding: 2rem; */
   background-color: #4b32dd;
   font-weight: bold;
-  display: grid;
-  grid-template-columns: 37% 37% 26%;
-  p {
-    padding: 1rem;
-  }
+  list-style-type: none
+}
+
+.container .trabajadores .trabajadores-listado p {
+  padding: 1rem;
 }
 
 .container .trabajadores .trabajadores-listado .bloque-1 {
-  padding: 2rem;
+  padding: 1rem;
 }
 .container .trabajadores .trabajadores-listado .bloque-2 {
-  padding: 2rem;
+  padding: 1rem;
   p:first-child {
     text-transform: uppercase;
   }
@@ -95,4 +86,8 @@ body {
   p {
     text-transform: uppercase;
   }
+}
+
+.filter {
+  display: none;
 }

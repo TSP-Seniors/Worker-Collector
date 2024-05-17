@@ -1,5 +1,22 @@
 import { expiryTime } from "./dateCalculate.js";
 
+document.addEventListener('keyup', (e) => {
+    if (e.target.matches('#nombre')) {
+        const searchText = e.target.value.toLocaleLowerCase();
+
+        document.querySelectorAll('.trabajadores-listado').forEach(worker => {
+            console.log(worker.parentElement('#nombre'));
+            if (searchText === '') {
+                worker.classList.remove('filter');
+            } else if (worker.textContent.toLocaleLowerCase().includes(searchText)) {
+                worker.classList.remove('filter');
+            } else {
+                worker.classList.add('filter');
+            }
+        });
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const timeElements = document.querySelectorAll('[id^="time"]');
     timeElements.forEach((element) => {
