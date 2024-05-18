@@ -43,63 +43,16 @@
     <div class="main-content">
       <div class="container">
         <h1>Nuestros aliados</h1>
+
         <div class="proveedores">
-          <div class="proveedores-listado">
-            <img src="#" alt="imagen" />
-            <p>
-              Company:
-              <span>
-                <% Colletions.forEach((e) => { %>
-                <a href="/<%= e.name %>"><%= e.name %></a>
-                <%}); %>
-              </span>
-            </p>
-            <img src="#" alt="imagen" />
-            <p>
-              Company:
-              <span>
-                <% Colletions.forEach((e) => { %>
-                <a href="/<%= e.name %>"><%= e.name %></a>
-                <%}); %>
-              </span>
-            </p>
-            <img src="#" alt="imagen" />
-            <p>
-              Company:
-              <span>
-                <% Colletions.forEach((e) => { %>
-                <a href="/<%= e.name %>"><%= e.name %></a>
-                <%}); %>
-              </span>
-            </p>
-            <img src="#" alt="imagen" />
-            <p>
-              Company:
-              <span>
-                <% Colletions.forEach((e) => { %>
-                <a href="/<%= e.name %>"><%= e.name %></a>
-                <%}); %>
-              </span>
-            </p>
-            <img src="#" alt="imagen" />
-            <p>
-              Company:
-              <span>
-                <% Colletions.forEach((e) => { %>
-                <a href="/<%= e.name %>"><%= e.name %></a>
-                <%}); %>
-              </span>
-            </p>
-            <img src="#" alt="imagen" />
-            <p>
-              Company:
-              <span>
-                <% Colletions.forEach((e) => { %>
-                <a href="/<%= e.name %>"><%= e.name %></a>
-                <%}); %>
-              </span>
-            </p>
-          </div>
+          <% Colletions.forEach((e) => { %>
+          <ul>
+            <li class="proveedores-listado">
+              <img src="media/empresa.svg" alt="imagen" />
+              <p>Company: <a href="/<%= e.name %>"><%= e.name %></a></p>
+            </li>
+          </ul>
+          <%}); %>
         </div>
       </div>
       <script type="module" src="scripts/workers.js"></script>

@@ -179,6 +179,7 @@
 }
 
 .container h1 {
+  /* padding: 2rem; */
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -284,11 +285,29 @@
 /* --------------------------------------------------------------------------- */
 
 .container .proveedores {
+  padding: 2rem;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid #003459; */
+}
+.container .proveedores ul {
+  padding: 20px;
 }
 
 .container .proveedores .proveedores-listado {
-  background-color: red;
+  background-color: white;
+  border: 2px solid #003459;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
 }
+
+/* .container .proveedores .proveedores-listado p {
+  padding: 1rem;
+} */
