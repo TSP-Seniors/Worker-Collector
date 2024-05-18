@@ -4,12 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+
+    <title><%= title %></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>hola siuuuuuuuuuuuuuuu</h1>
-    <% Colletions.forEach((e) => { %>
-      <a href="/<%= e.name %>"><%= e.name %></a>
-    <%}); %>
+    <div class="sidebar">
+      <div class="top">
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <div class="user">
+        <a href="#"
+          ><img class="user-img" src="media/logo.png" alt="logo empresa"
+        /></a>
+      </div>
+      <ul>
+        <li>
+          <a href="/"
+            ><i class="bx bxs-home"></i>
+            <span class="nav-item">home</span>
+          </a>
+          <span class="tooltip">home</span>
+        </li>
+
+        <li>
+          <a href="/#"
+            ><i class="bx bx-log-out"></i>
+            <span class="nav-item">logout</span>
+          </a>
+          <span class="tooltip">logout</span>
+        </li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="container">
+        <h1>Nuestros aliados</h1>
+        <div class="proveedores">
+          <div class="proveedores-listado">
+            <img src="#" alt="imagen" />
+            <p>
+              Company:
+              <span>
+                <% Colletions.forEach((e) => { %>
+                <a href="/<%= e.name %>"><%= e.name %></a>
+                <%}); %>
+              </span>
+            </p>
+            <img src="#" alt="imagen" />
+            <p>
+              Company:
+              <span>
+                <% Colletions.forEach((e) => { %>
+                <a href="/<%= e.name %>"><%= e.name %></a>
+                <%}); %>
+              </span>
+            </p>
+            <img src="#" alt="imagen" />
+            <p>
+              Company:
+              <span>
+                <% Colletions.forEach((e) => { %>
+                <a href="/<%= e.name %>"><%= e.name %></a>
+                <%}); %>
+              </span>
+            </p>
+            <img src="#" alt="imagen" />
+            <p>
+              Company:
+              <span>
+                <% Colletions.forEach((e) => { %>
+                <a href="/<%= e.name %>"><%= e.name %></a>
+                <%}); %>
+              </span>
+            </p>
+            <img src="#" alt="imagen" />
+            <p>
+              Company:
+              <span>
+                <% Colletions.forEach((e) => { %>
+                <a href="/<%= e.name %>"><%= e.name %></a>
+                <%}); %>
+              </span>
+            </p>
+            <img src="#" alt="imagen" />
+            <p>
+              Company:
+              <span>
+                <% Colletions.forEach((e) => { %>
+                <a href="/<%= e.name %>"><%= e.name %></a>
+                <%}); %>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <script type="module" src="scripts/workers.js"></script>
+    </div>
   </body>
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+    btn.onclick = function () {
+      sidebar.classList.toggle("active");
+    };
+  </script>
 </html>

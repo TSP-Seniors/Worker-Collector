@@ -4,34 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+
     <title><%= title %></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- <h1>Hola</h1> -->
-    <div class="container">
-      <div class="buscador">
-        <input type="text" id="nombre" placeholder="Buscar Nombre" />
+    <div class="sidebar">
+      <div class="top">
+        <!-- <div class="logo">
+          <i class="bx bxl-baidu"></i>
+          <span>Usuario</span>
+        </div> -->
+        <i class="bx bx-menu" id="btn"></i>
       </div>
-      <div class="trabajadores">
-        <ul>
-          <% ArrWorkers.forEach((worker, index) => { %>
-          <li class="trabajadores-listado">
-            <div class="bloque-1">
-              <p>Nombre: <span id="nombre-trabajador"><%= worker.contact_name %></span></p>
-              <p>Empresa: <span ><%= title %></p>
-            </div>
-            <div class="bloque-2">
-              <p>Certificación: <%= worker.certification_name %></p>
-              <p>Fecha de Certificación: <%= worker.certification_date.toLocaleDateString() %></p>
-              <p>Fecha de Expiración: <span id="exp"><%= worker.expiration_date.toLocaleDateString() %></span></p>
-            </div>
-            <div id="time_<%= index %>" class="bloque-3"></div>
-            <!-- btn-amarillo btn-rojo btn-verde -->
-          </li>
-          <% }); %>
-        </ul>
+      <div class="user">
+        <a href="#"
+          ><img class="user-img" src="media/logo.png" alt="logo empresa"
+        /></a>
       </div>
+      <ul>
+        <li>
+          <a href="/"
+            ><i class="bx bxs-home"></i>
+            <span class="nav-item">home</span>
+          </a>
+          <span class="tooltip">home</span>
+        </li>
+
+        <li>
+          <a href="/#"
+            ><i class="bx bx-log-out"></i>
+            <span class="nav-item">logout</span>
+          </a>
+          <span class="tooltip">logout</span>
+        </li>
+      </ul>
     </div>
-    <script type="module" src="scripts/workers.js"></script>
+    <div class="main-content">
+      <div class="container">
+        <h1>Extreme network</h1>
+        <div class="buscador">
+          <input type="text" id="nombre" placeholder="Buscar Nombre" />
+        </div>
+        <div class="trabajadores">
+          <ul>
+            <% ArrWorkers.forEach((worker, index) => { %>
+            <li class="trabajadores-listado">
+              <div class="bloque-1">
+                <p>
+                  Nombre:
+                  <span id="nombre-trabajador"><%= worker.contact_name %></span>
+                </p>
+                <p>Empresa: <span><%= title %> </span></p>
+              </div>
+              <div class="bloque-2">
+                <p>
+                  Certificación: <span><%= worker.certification_name %></span>
+                </p>
+                <p>
+                  Fecha de Certificación:
+                  <span
+                    ><%= worker.certification_date.toLocaleDateString() %></span
+                  >
+                </p>
+                <p>
+                  Fecha de Expiración:
+                  <span id="exp"
+                    ><%= worker.expiration_date.toLocaleDateString() %></span
+                  >
+                </p>
+              </div>
+              <div id="time_<%= index %>" class="bloque-3"></div>
+              <!-- btn-amarillo btn-rojo btn-verde -->
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+      <script type="module" src="scripts/workers.js"></script>
+    </div>
   </body>
+  <script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+    btn.onclick = function () {
+      sidebar.classList.toggle("active");
+    };
+  </script>
 </html>

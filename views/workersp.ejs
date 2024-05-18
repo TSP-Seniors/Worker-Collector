@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!-- <h1>Hola</h1> -->
+    <div class="container">
+      <div class="buscador">
+        <img src="media/Logo.png" alt="Logo empresa" />
+        <input type="text" id="nombre" placeholder="Buscar Nombre" />
+      </div>
+      <div class="trabajadores">
+        <ul>
+          <% ArrWorkers.forEach((worker, index) => { %>
+          <li class="trabajadores-listado">
+            <div class="bloque-1">
+              <p>
+                Nombre:
+                <span id="nombre-trabajador"><%= worker.contact_name %></span>
+              </p>
+              <p>Empresa: <span><%= title %> </span></p>
+            </div>
+            <div class="bloque-2">
+              <p>
+                Certificación: <span><%= worker.certification_name %></span>
+              </p>
+              <p>
+                Fecha de Certificación:
+                <span
+                  ><%= worker.certification_date.toLocaleDateString() %></span
+                >
+              </p>
+              <p>
+                Fecha de Expiración:
+                <span id="exp"
+                  ><%= worker.expiration_date.toLocaleDateString() %></span
+                >
+              </p>
+            </div>
+            <div id="time_<%= index %>" class="bloque-3"></div>
+            <!-- btn-amarillo btn-rojo btn-verde -->
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="scripts/workers.js"></script>
+  </body>
+</html>
