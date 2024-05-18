@@ -15,11 +15,13 @@ export const homePage = async (req, res) => {
 export const workerPage = async (req, res) => {
     try {
         const workers = await getWorkers();
-        const workerId = req.params.id;
+        const id = req.params.id;
+        const titleID = id.toUpperCase();
+        // console.log(req.params);
         res.render('workers', {
             ArrWorkers: workers,
-            title: 'Página del trabajador', workerId,
-            WorkerId: workerId,
+            title: titleID,
+            WorkerId: id,
         });
     } catch (error) {
         console.log('Error al obtener los trabajadores:', error);
