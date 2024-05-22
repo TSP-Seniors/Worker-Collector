@@ -11,11 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "standard": "^17.1.0"
   },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "mongoose": "^8.3.3"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
